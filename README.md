@@ -1,6 +1,6 @@
 PROG6211_POE_PART1
 
-Instructions on how to use Siphiwe's Budgeting Plan Application.
+Instructions on how to use Budgeting Plan Application for Siphiwe.
 
 1. The budgeting plan application is a C# based commandline application
    and so it can be run on the Visual Studio.
