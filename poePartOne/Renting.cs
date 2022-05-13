@@ -6,14 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace poePartOne
 {
     internal class Renting : Expenses
     {
-        double[] expenseArray;
-        double monthlyRental;
+        //CLASS FIELDS
+        private double[] expenseArray;
+        private double monthlyRental;
 
-        //Constructor
+        //CONSTRUCTOR
         public Renting(double[] expenseArray, double monthlyRental)
             : base(expenseArray)
         {
@@ -21,7 +23,7 @@ namespace poePartOne
             this.monthlyRental = monthlyRental;
         }
 
-        //Method Returns Monthly Rent Cost
+        //METHOD RETURNS MONTHLY RENT COST
         public Double getMonthlyRental() {
             return monthlyRental;
         }

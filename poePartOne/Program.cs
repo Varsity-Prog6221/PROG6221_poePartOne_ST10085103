@@ -8,13 +8,13 @@ namespace poePartOne
     {
         static void Main(string[] args)
         {
-            //INPUT GROSS INCOME & TAX-DETUCTABLE
+            //INPUT FOR GROSS INCOME & TAX-DETUCTABLE
             Console.WriteLine("Enter Gross monthly income (before deductions)");
             double grossIncome = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter Estimated monthly tax deducted");
             double taxDeducted = Convert.ToDouble(Console.ReadLine());
             
-            //INPUT EACH EXPENSE
+            //INPUTS FOR EACH EXPENSE
             double[] expenseArray = new double[5];
             Console.WriteLine("Enter Estimated monthly expenditures for the following categories: ");
             Console.WriteLine("Groceries: ");
@@ -43,9 +43,9 @@ namespace poePartOne
                 obj.getInitialExpense();
                 obj.getMonthlyRental();
 
-                //CALCULATE THEN DISPLAY AVAILABLE MONEY
-                double availableMoney = grossIncome - ((obj.getInitialExpense() + obj.getMonthlyRental()) - taxDeducted);
-                Console.WriteLine("\nThe available monthly money is: " + availableMoney);
+                //CALCULATES THEN DISPLAYS AVAILABLE MONEY
+                double availableMoney = grossIncome - (obj.getInitialExpense() + obj.getMonthlyRental() + taxDeducted);
+                Console.WriteLine("\nThe available monthly money is: R" + availableMoney);
             }
             //if BUYING PROPERTY (HOMELOANS)
             else
@@ -67,13 +67,13 @@ namespace poePartOne
 
                 //ASSESS CHANCE OF HOMELOAN APPROVAL
                 if (HomeLoanRepayment > (grossIncome*0.33)) {
-                    Console.WriteLine("Approval of the Home Loan is unlikely");
+                    Console.WriteLine("\nApproval of the Home Loan is unlikely.");
                 }
 
 
-                //CALCULATE THEN DISPLAY AVAILABLE MONEY
-                double availableMoney2 = grossIncome - ((obj2.getInitialExpense() + HomeLoanRepayment) - taxDeducted);
-                Console.WriteLine("\nThe available monthly money is: " +availableMoney2);
+                //CALCULATES THEN DISPLAYS AVAILABLE MONEY
+                double availableMoney2 = grossIncome - (obj2.getInitialExpense() + HomeLoanRepayment + taxDeducted);
+                Console.WriteLine("\nThe available monthly money is: R" +availableMoney2);
             }
         }
     }

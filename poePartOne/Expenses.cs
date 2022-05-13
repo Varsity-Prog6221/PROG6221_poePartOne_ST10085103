@@ -6,20 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace poePartOne
 {
     internal abstract class Expenses
     {
-        double[] expenseArray;
+        //EXPENSE ARRAY FIELD
+        private double[] expenseArray;
 
-
-        //Constructor Setup
+        //CONSTRUCTOR SETUP
         public Expenses(double[] expenseArray) {
             this.expenseArray = expenseArray;
         }
 
 
-        //Method Calculates & Returns Intitial Expenses
+        //METHOD CALCULATES AND RETURNS INITIAL EXPENSES
         public Double getInitialExpense()
         {
             double addedExpenses = 0;
